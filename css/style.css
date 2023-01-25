@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Asap', sans-serif;
+}
+
+html{
+    font-size: 62.5%; /* 1 rem ----- 10px */
+}
+
+body{
+    background-color: rgba(255,255,255);
+}
+
+
+/* ------------------------- barra de navegacion ------------------------- */
+nav{
+    height: 8vh;
+}
+
+#navBar {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navBar img{
+    margin-right: 2rem;
+}
+
+#navBar ul{
+    display: flex;
+}
+
+#navBar ul li{
+    list-style: none;
+    margin-right: 7vh;
+    display: flex;
+}
+
+    #navBar ul li a{
+        font-size: 3.1vh;
+        text-decoration: none;
+        color: rgb(233, 194, 78);
+        
+    }
+
+        #navBar ul li a:hover{
+            transform: scale(1.07);
+        }
+
+/* ------------------------- fin barra de navegacion ------------------------- */
+
+/* ------------------------- header ------------------------- */
+
+.imgSize{
+    width: 100%;
+}
+
+/* ------------------------- fin header ------------------------- */
+
+#contenedorMain{
+    display: flex;
+} 
+
+/* ------------------------- aside ------------------------- */
+aside{
+    background-color: rgba(44,44,44, 0.1);
+}
+
+aside h2{
+    margin-top: 1rem ;
+    font-size: 3.5vh;
+}
+
+aside ul{
+    list-style: none;
+}
+
+aside ul li{
+    color: rgba(44,44,44);
+    font-size: 2.5vh;
+	line-height: 3.5vh;
+    text-align: center;
+    padding: 1rem;
+    margin: 0 2rem;
+}
+
+aside ul li a{
+    text-decoration: none;
+    color: rgba(44,44,44);
+}
+
+aside ul li a:hover{
+    font-weight: bold;
+}
+
+/* ------------------------- fin aside ------------------------- */
+
+/* ------------------------- main ------------------------- */
+main{
+    padding: 3rem 0;
+}
+
+h1, h2, h3{
+	color: rgba(0,0,0);
+    font-weight: bold;
+    text-align: center;
+}
+
+h1{
+    font-size: 5vh;
+}
+
+h2{
+    font-size: 4vh;
+    padding: 1rem;
+}
+
+h3{
+    font-size: 3vh;
+    padding: 1rem;
+}
+
+main p, main ul li{
+	color: rgba(44,44,44);
+    font-size: 3vh;
+	line-height: 4vh;
+    text-align: justify;
+    text-indent: 1.5em;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+main ul{
+    margin-left: 5rem;
+}
+
+.enlaceDeco{
+    text-decoration: none;
+}
+
+.ubicacion{
+    text-align: center;
+    padding: 1rem;
+}
+
+    .ubicacion iframe{
+        width: 90%;
+    }
+
+.formWpp{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#btnWpp{
+
+    width: 30rem;
+    height: 7rem;
+
+    background-color: rgb(29, 189, 87);
+
+    border: 1px solid rgb(29, 189, 87);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(255,255,255);  
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+   
+}
+
+    #btnWpp:hover{
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+    }
+
+#contenedorVideo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.videoYT{
+    width: 30%;
+    padding: 1rem 2rem;
+
+}
+
+.multiVideo{
+    width: 35rem;
+    height: 50rem;
+}
+
+.multiImg{
+    width: 25%;
+}
+
+#contenedorPreguntas{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 3rem;
+}
+
+.unaPreg{
+    background-color: rgba(124,121,92, 0.2);
+    padding: 40px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+    .unaPreg:hover{
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .unaPreg .rta{
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+.formDudas{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+    .formDudas label{
+        font-size: 3rem;
+    }
+    
+    .formDudas div{
+        margin: 2rem 0;
+    }
+
+    #btnDudas{
+
+        width: 10rem;
+        height: 5rem;
+    
+        background-color: rgba(44,44,44, 0.5);
+    
+        border: 1px solid rgba(44,44,44, 0.5);
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgba(255,255,255);  
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+       
+    }
+
+        #btnDudas:hover{
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+        }
+
+/* ------------------------- contenedorPacks ------------------------- */
+
+#contenedorPacks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+    #contenedorPacks .pack{
+        padding: 0 2rem;
+    }
+
+    #contenedorPacks .pack .cantidadClase{
+        padding-top: 4rem;
+
+        text-align: center;
+        font-size: 8rem;
+        font-weight: bold;
+        color: rgba(226,216,92);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    }
+
+    #contenedorPacks .pack .precioClase{
+        padding: 4rem 0;
+
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+/* ------------------------- fin contenedorPacks ------------------------- */
+
+/* ------------------------- index docs ------------------------- */
+
+#docs{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-row: auto;
+    margin: 0 3rem;
+}
+
+    #docs a:visited{
+        color: rgba(44,44,44);
+    }
+
+#docs a figure {
+    border: solid 1px rgba(124,121,92, 0.2);
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 0;
+}
+
+    #docs a figure:hover{
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+        transform: scale3d(1.1);
+        
+    }
+
+    #docs a figure img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+#docs a figure figcaption {
+    font-size: 3vh;
+    text-align: center;
+    text-indent: 0;
+    padding: 1rem;
+}
+
+/* ------------------------- fin index docs ------------------------- */
+
+/* ------------------------- fin main ------------------------- */
+
+
+
+/* ------------------------- footer ------------------------- */
+
+footer{
+    margin-top: auto;
+    padding: 1rem;
+
+    background-color: rgba(226,216,92);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h3{
+    padding-bottom: 1rem;
+}
+
+.iconRedes{
+    margin: 0 3rem;
+    padding: 0.5rem 0;
+}
+
+    .iconRedes:hover{
+        cursor: pointer;
+    }
+
+/* ------------------------- fin footer ------------------------- */
+
+
+
+/* ------------------------- maquetado grid ------------------------- */
+#navBar{
+    grid-area: nav;
+}
+
+#header{
+    grid-area: header;
+}
+
+#aside{
+    grid-area: aside;
+}
+
+#main{
+    grid-area: main;
+}
+
+#footer{
+    grid-area: pie;
+}
+
+@media screen and (min-width:320px){
+    #contenedorIndex{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "nav" 
+        "header" 
+        "aside"
+        "main" 
+        "pie";
+    }
+
+    #contenedorOtros{
+        display: grid;
+        grid-template-columns: (1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "nav" 
+        "main" 
+        "pie";
+    }
+
+    #docs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:768px){
+       #docs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1024px){
+    #contenedorIndex{
+        display: grid;
+        grid-template-columns: 17% 83%;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "nav nav" 
+        "header header" 
+        "aside main" 
+        "pie pie";
+    }
+
+    #contenedorOtros{
+        display: grid;
+        grid-template-columns: (1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "nav" 
+        "main" 
+        "pie";
+    }
+
+    #docs{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* ------------------------- fin maquetado grid------------------------- */
+
+
+
+
+
