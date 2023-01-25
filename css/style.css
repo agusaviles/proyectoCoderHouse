@@ -17,44 +17,54 @@ body{
 
 
 /* ------------------------- barra de navegacion ------------------------- */
-nav{
-    height: 8vh;
-}
-
 #navBar {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-image: linear-gradient(to right, #000000 0%, #434343  100%);
     position: sticky;
     top: 0;
-    padding: 1.5rem 2rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#navBar img{
-    margin-right: 2rem;
-}
-
-#navBar ul{
+.menu{
     display: flex;
 }
 
-#navBar ul li{
+.menu li{
     list-style: none;
     margin-right: 7vh;
     display: flex;
 }
 
-    #navBar ul li a{
-        font-size: 3.1vh;
+    .menu a{
+        font-weight: 400;
+        font-size: 3.5vh;
         text-decoration: none;
         color: rgb(233, 194, 78);
-        
+        position: relative;
+        padding-bottom: 3px;
     }
 
-        #navBar ul li a:hover{
-            transform: scale(1.07);
-        }
+        .menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(to left, #e9d362 0%, #333333  100%);
+            z-index: 1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease-in-out;
+          }
+          
+          .menu a:hover::before {
+            transform: scaleX(1);
+          }
+
+
 
 /* ------------------------- fin barra de navegacion ------------------------- */
 
@@ -157,33 +167,6 @@ main ul{
         width: 90%;
     }
 
-.formWpp{
-    text-align: center;
-    padding: 1rem 0;
-}
-
-#btnWpp{
-
-    width: 30rem;
-    height: 7rem;
-
-    background-color: rgb(29, 189, 87);
-
-    border: 1px solid rgb(29, 189, 87);
-    border-radius: 20px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgba(255,255,255);  
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-   
-}
-
-    #btnWpp:hover{
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-
-    }
 
 #contenedorVideo{
     display: flex;
@@ -381,8 +364,6 @@ main ul{
 footer{
     margin-top: auto;
     padding: 1rem;
-
-    /* background-color: rgba(226,216,92); */
     background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  51%, #F09819  100%);
     display: flex;
     flex-direction: column;
