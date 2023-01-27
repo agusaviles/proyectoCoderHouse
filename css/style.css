@@ -1,26 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Asap', sans-serif;
+}
+
+html{
+    font-size: 62.5%; /* 1 rem ----- 10px */
+}
+
 body{
     background-color: rgba(255,255,255);
 }
 
+
 /* ------------------------- barra de navegacion ------------------------- */
-
-.menu a, .desplegable{
-    font-size: 3vh;
-    color: rgb(233, 194, 78);
-}
-
-.menu a:hover, .desplegable:hover{
-    color: rgba(255,255,255);
-}
-
-.bg-navBar{
-    background-image: linear-gradient(to right, #000000 0%, #434343  100%);
-}
-
 #navBar {
+    background-image: linear-gradient(to right, #000000 0%, #434343  100%);
     position: sticky;
     top: 0;
-    padding: 1rem;
+    padding: 2rem;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -28,9 +30,9 @@ body{
 #navBar img{
     margin-right: 4rem;
     margin-left: 2rem;
-    /* transform: scale(1.1); */
+    transform: scale(1.1);
 }
-/*
+
 .menu{
     display: flex;
 }
@@ -66,7 +68,7 @@ body{
           
           .menu a:hover::before {
             transform: scaleX(1);
-          }  */
+          }
 
 
 
@@ -89,10 +91,10 @@ aside{
     background-color: rgba(44,44,44, 0.1);
 }
 
-/* aside h2{
+aside h2{
     margin-top: 1rem ;
     font-size: 3.5vh;
-} */
+}
 
 aside ul{
     list-style: none;
@@ -120,15 +122,31 @@ aside ul li a:hover{
 
 /* ------------------------- main ------------------------- */
 main{
-    padding: 1rem 0;
+    padding: 3rem 0;
 }
 
 h1, h2, h3{
-    color: rgba(0, 0, 0, 1);
+	color: rgba(0,0,0);
+    font-weight: bold;
     text-align: center;
 }
 
+h1{
+    font-size: 5vh;
+}
+
+h2{
+    font-size: 4vh;
+    padding: 1rem;
+}
+
+h3{
+    font-size: 3vh;
+    padding: 1rem;
+}
+
 main p, main ul li{
+	color: rgba(44,44,44);
     font-size: 3vh;
 	line-height: 4vh;
     text-align: justify;
