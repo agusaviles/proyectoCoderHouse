@@ -21,22 +21,38 @@
     <div id="contenedorOtros">
 
         <!-- comienzo nav -->
-        <nav id="navBar">
-
-            <a href="../index.html"><img src="../img/kingdom1.png" alt="Logo de Kingdom" title="Logo de Kingdom Crossfit"/></a>
-
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="clases.html">Clases</a>
-                    <!-- <ul> -->
-                        <!-- <li><a href="pages/clases.html">Tarifas</a></li> -->
-                    <!-- </ul> -->
-                </li>
-                <li><a href="multimedia.html">Multimedia</a></li>
-                <li><a href="dudas.html">Dudas</a></li>
-            </ul>
-
+        <nav class="navbar sticky-top navbar-expand-lg bg-dark py-4" data-bs-theme="dark" id="navBar">
+            <div class="container">
+                <a href="../index.html"><img src="../img/kingdom1.png" alt="Logo de Kingdom" title="Logo de Kingdom Crossfit"/></a>
+                <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto menu">
+                        <li class="nav-item me-5">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown me-5">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Clases
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item mt-3" href="clases.html#tarifas">Tarifas</a></li>
+                              <li><a class="dropdown-item mt-3 mb-3" href="clases.html#horarios">Horarios</a></li>
+                            </ul>
+                          </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="multimedia.html">Multimedia</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="dudas.html">Dudas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <!-- fin nav-->
 
@@ -45,25 +61,46 @@
 
             <h1>Dudas frecuentes</h1>
 
-            <div class="contenedorPreguntas">
+            <section class="contenedorPreguntas">
 
-                <div class="unaPreg">
+                <div class="unaPreg w-75">
                     <p class="duda">Cómo puedo solicitar mi clase de prueba? <img src="../img/plus-icon.webp" alt="Ver más"/></p>
                     <p class="rta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis unde commodi voluptatem repellat nobis dolor est quasi veniam sequi molestiae, dolore adipisci minus architecto modi non similique perferendis libero at?</p>
                 </div>
 
-                <div class="unaPreg">
+                <div class="unaPreg w-75">
                     <p class="duda">Hay un limite de edad para empezar crossfit? <img src="../img/plus-icon.webp"/></p>
                     <p class="rta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis unde commodi voluptatem repellat nobis dolor est quasi veniam sequi molestiae, dolore adipisci minus architecto modi non similique perferendis libero at?</p>
                 </div>
-                
-            </div>
 
-            <form action="#" method="post" class="formDudas">
-                <label for="duda">Deje su duda aquí</label>
-                <div><textarea id="duda" rows="10" cols="70"></textarea></div>
-                <input type="submit" name="enviar" value="Enviar" class="btn-grad"/>
-            </form>
+                <div class="unaPreg w-75">
+                    <p class="duda">Cómo puedo solicitar mi clase de prueba? <img src="../img/plus-icon.webp" alt="Ver más"/></p>
+                    <p class="rta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis unde commodi voluptatem repellat nobis dolor est quasi veniam sequi molestiae, dolore adipisci minus architecto modi non similique perferendis libero at?</p>
+                </div>
+
+                <div class="unaPreg w-75">
+                    <p class="duda">Hay un limite de edad para empezar crossfit? <img src="../img/plus-icon.webp"/></p>
+                    <p class="rta">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis unde commodi voluptatem repellat nobis dolor est quasi veniam sequi molestiae, dolore adipisci minus architecto modi non similique perferendis libero at?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ipsa dignissimos inventore nobis! Doloremque, dolore minima modi consequuntur pariatur ea ad vel tempore inventore ipsa, dolores harum unde recusandae placeat!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nam qui provident at voluptas quam beatae sunt autem. Optio quisquam corrupti quis doloribus sit, illo laudantium itaque dolorem iusto cupiditate!
+                    </p>
+                </div>
+                
+            </section>
+
+            <p>Si en la sección anterior no encontraste la respuesta que buscabas, te brindamos un espacio para que expreses tu consulta. Tu aporte puede ser importante para nuestra comunidad!</p>
+
+            <section class="formDudas">
+
+                <form action="#" method="post" class="w-50">
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2" class="h-label">¿Cuál es tu consulta?</label>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+                </form>
+
+            </section>
             
         </main>
         <!-- fin main -->

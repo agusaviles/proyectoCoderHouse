@@ -2,19 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
 *{
-    margin: 0;
-    padding: 0;
     font-family: 'Asap', sans-serif;
-}
-
-html{
-    font-size: 62.5%; /* 1 rem ----- 10px */
 }
 
 body{
     background-color: rgba(255,255,255);
 }
-
 
 /* ------------------------- barra de navegacion ------------------------- */
 #navBar {
@@ -22,12 +15,16 @@ body{
 }
 
 .menu a{
-    font-size: 3.5vh;
+    font-size: 3vh;
 }
 
     .menu a:hover{
         color: rgb(233, 194, 78);
     }
+
+#navBar ul ul{
+    border: none;
+}
 
 /* ------------------------- fin barra de navegacion ------------------------- */
 
@@ -49,7 +46,6 @@ aside{
 }
 
 aside h2{
-    margin-top: 1rem ;
     font-size: 3.5vh;
 }
 
@@ -57,13 +53,8 @@ aside ul{
     list-style: none;
 }
 
-aside ul li{
-    color: rgba(44,44,44);
-    font-size: 2.5vh;
-	line-height: 3.5vh;
-    text-align: center;
-    padding: 1rem;
-    margin: 0 2rem;
+aside ul li{    
+    padding-bottom: 1em;
 }
 
 aside ul li a{
@@ -79,7 +70,7 @@ aside ul li a:hover{
 
 /* ------------------------- main ------------------------- */
 main{
-    padding: 3rem 0;
+    padding: 1em 0;
 }
 
 h1, h2, h3{
@@ -94,27 +85,31 @@ h1{
 
 h2{
     font-size: 4vh;
-    padding: 1rem;
+    padding: 0.5em;
 }
 
 h3{
     font-size: 3vh;
-    padding: 1rem;
+    padding: 0.5em;
+}
+
+p, ul li{
+    color: rgba(44,44,44);
+    font-size: 2.5vh;
+	line-height: 3.5vh;
+
 }
 
 main p, main ul li{
-	color: rgba(44,44,44);
-    font-size: 3vh;
-	line-height: 4vh;
     text-align: justify;
-    text-indent: 1.5em;
+    text-indent: 1em;
     width: 90%;
     margin: 0 auto;
-    padding: 0.5rem 0;
+    padding: 0.5em 0;
 }
 
 main ul{
-    margin-left: 5rem;
+    margin-left: 5em;
 }
 
 .enlaceDeco{
@@ -123,7 +118,7 @@ main ul{
 
 .ubicacion{
     text-align: center;
-    padding: 1rem;
+    padding: 1em;
 }
 
     .ubicacion iframe{
@@ -139,13 +134,13 @@ main ul{
 
 .videoYT{
     width: 30%;
-    padding: 1rem 2rem;
+    padding: 1em 2em;
 
 }
 
 .multiVideo{
-    width: 35rem;
-    height: 50rem;
+    width: 35em;
+    height: 50em;
 }
 
 .multiImg{
@@ -157,14 +152,14 @@ main ul{
 .contenedorPreguntas{
     display: grid;
     grid-template-columns: 1fr;
+    justify-items: center;
     gap: 40px;
-    margin: 3rem;
-    padding: 0 7vh;
+    margin:3em 1em;
 }
 
     .unaPreg{
         background-color: rgba(124,121,92, 0.1);
-        padding: 3rem 0;
+        padding: 1em 0;
         border: 2px solid transparent;
         border-radius: 10px;
         overflow: hidden;
@@ -211,40 +206,33 @@ main ul{
         transition: .3s ease;
     }
 
-
-.formDudas{
+/* Formulario para enviar consulta */
+.formDudas {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    padding: 1rem 0;
+  }
+  
+.h-label, .btn-dark{
+    font-size: 2.5vh;
 }
 
-    .formDudas label{
-        font-size: 3rem;
-    }
-    
-    .formDudas div{
-        margin: 2rem 0;
-    }
-
-.btn-grad {
-    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  51%, #F09819  100%);
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    font-size: 3vh;
+.btn-dark{
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(67, 67, 67)  51%, rgb(0, 0, 0)  100%);
+    margin: 5px;
+    padding: 10px 35px;
     transition: 0.5s;
     background-size: 200% auto;
-    color: rgba(0, 0, 0, 0.8);            
-    box-shadow: 0 0 20px #eee;
+    color: rgba(255,255,255);            
+    box-shadow: 0 0 20px rgb(238, 238, 238);
     border-radius: 10px;
-    border: none;
 }
 
-    .btn-grad:hover {
+    .btn-dark:hover {
         background-position: right center; /* change the direction of the change here */
+        color: rgb(255, 255, 255);
         text-decoration: none;
     }
-         
-
 /* ------------------------- fin dudas frecuentes ------------------------- */
 
 /* ------------------------- contenedorPacks ------------------------- */
@@ -325,21 +313,16 @@ main ul{
 /* ------------------------- footer ------------------------- */
 
 footer{
-    margin-top: auto;
-    padding: 1rem;
+    padding-bottom: 1em;
+    padding-top: 0.5em;
     background: linear-gradient(90deg, rgba(240,152,25,0.9) 0%, rgba(226,216,92,1) 51%, rgba(240,152,25,0.9) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-footer h3{
-    padding-bottom: 1rem;
-}
-
 .iconRedes{
-    margin: 0 3rem;
-    padding: 0.5rem 0;
+    margin: 0 1em;
 }
 
     .iconRedes:hover{
