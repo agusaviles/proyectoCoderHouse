@@ -76,11 +76,15 @@ main{
 h1, h2, h3{
 	color: rgba(0,0,0);
     font-weight: bold;
+}
+
+h1, h2{
     text-align: center;
 }
 
 h1{
     font-size: 5vh;
+    margin-top: 0.3em;
 }
 
 h2{
@@ -92,6 +96,9 @@ h3{
     font-size: 3vh;
     padding: 0.5em;
 }
+    main h3{
+        margin-left: 8em;
+    }
 
 p, ul li{
     color: rgba(44,44,44);
@@ -125,19 +132,6 @@ main ul{
         width: 90%;
     }
 
-
-#contenedorVideo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.videoYT{
-    width: 30%;
-    padding: 1em 2em;
-
-}
-
 .multiVideo{
     width: 35em;
     height: 50em;
@@ -145,6 +139,17 @@ main ul{
 
 .multiImg{
     width: 25%;
+}
+
+.tipoWod{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 0 5em;
+}
+
+.img-position{
+    display: block;
+    margin: auto;
 }
 
 /* ------------------------- dudas frecuentes ------------------------- */

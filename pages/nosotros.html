@@ -20,22 +20,40 @@
 <body>
 
         <!-- comienzo nav -->
-        <nav id="navBar">
-
-            <a href="../index.html"><img src="../img/kingdom1.png" alt="Logo de Kingdom" title="Logo de Kingdom Crossfit"/></a>
-
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="clases.html">Clases</a>
-                    <!-- <ul> -->
-                        <!-- <li><a href="pages/clases.html">Tarifas</a></li> -->
-                    <!-- </ul> -->
-                </li>
-                <li><a href="multimedia.html">Multimedia</a></li>
-                <li><a href="dudas.html">Dudas</a></li>
-            </ul>
-
+        <nav class="navbar sticky-top navbar-expand-lg bg-dark py-4" data-bs-theme="dark" id="navBar">
+            <div class="container">
+                <a href="../index.html"><img src="../img/kingdom1.png" alt="Logo de Kingdom" title="Logo de Kingdom Crossfit"/></a>
+                <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto menu">
+                        <li class="nav-item me-5">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown me-5">
+                            <a class="nav-link dropdown-toggle" href="clases.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Clases
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item mt-3" href="pages/clases.html#modalidad">Modalidad de trabajo</a></li>
+                                <li><a class="dropdown-item mt-3" href="pages/clases.html#tarifas">Tarifas y horarios</a></li>
+                                <li><a class="dropdown-item mt-3 mb-3" href="pages/clases.html#funcional">Funcional</a></li>
+                                <li><a class="dropdown-item mt-3 mb-3" href="pages/clases.html#yoga">Yoga</a></li>
+                            </ul>
+                          </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="multimedia.html">Multimedia</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="dudas.html">Dudas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <!-- fin nav-->
 
