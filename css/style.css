@@ -150,11 +150,8 @@ main ul{
 }
 
 .tipoWod{
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    margin: 0 5em;
+    margin: 1em 5em;
 }
-
 
 /* ------------------------- dudas frecuentes ------------------------- */
 
@@ -314,6 +311,7 @@ footer{
     #docs{
         grid-template-columns: repeat(1, 1fr);
     }
+
 }
 
 @media (min-width:768px){
