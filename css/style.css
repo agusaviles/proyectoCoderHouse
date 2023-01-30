@@ -167,7 +167,7 @@ main ul{
 }
 
 .btn-dark{
-    background-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(67, 67, 67)  51%, rgb(0, 0, 0)  100%);
+    background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000 100%);
     margin: 5px;
     padding: 10px 35px;
     transition: 0.5s;
@@ -183,11 +183,11 @@ main ul{
         text-decoration: none;
     }
 
-    .accordion-button:not(.collapsed) {
-        color: rgba(0, 0, 0, 1);
-        background-color: rgba(255,255,255);
-        font-weight: 700;
-    }
+.accordion-button:not(.collapsed) {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255,255,255);
+    font-weight: 700;
+}
 
 
 /* ------------------------- fin dudas frecuentes ------------------------- */
