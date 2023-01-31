@@ -7,6 +7,7 @@
 
 body{
     background-color: rgba(255,255,255);
+    overflow-x: hidden;
 }
 
 /* ------------------------- barra de navegacion ------------------------- */
@@ -22,31 +23,10 @@ body{
         color: rgb(233, 194, 78);
     }
 
-#navBar ul ul{
-    background-image: linear-gradient(to right, #000000 0%, #434343  100%);
+.navbar-toggler-icon{
+    background-image: url(../img/menu_open.svg);
 }
-
-a[class^="dropdown-item"]{
-    padding: 0.5em 1em;
-}
-    a[class^="dropdown-item"]:hover{
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-
-/* ------------------------- fin barra de navegacion ------------------------- */
-
-/* ------------------------- header ------------------------- */
-
-.imgSize{
-    width: 100%;
-}
-
-/* ------------------------- fin header ------------------------- */
-
-#contenedorMain{
-    display: flex;
-} 
+/* ------------------------- fin barra de navegacion ------------------------- */ 
 
 /* ------------------------- aside ------------------------- */
 aside{
@@ -54,11 +34,14 @@ aside{
 }
 
 aside h2{
-    font-size: 3.5vh;
+    font-size: 3vh;
+    margin-top: 1em;
 }
 
 aside ul{
     list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
 aside ul li{    
@@ -103,10 +86,8 @@ h2{
 h3{
     font-size: 3vh;
     padding: 0.5em;
+    text-indent: 1em;
 }
-    main h3{
-        margin-left: 8em;
-    }
 
 p, ul li{
     color: rgba(44,44,44);
@@ -115,7 +96,7 @@ p, ul li{
 
 }
 
-main p, main ul li{
+main p, main h3{
     text-align: justify;
     text-indent: 1em;
     width: 90%;
@@ -124,26 +105,20 @@ main p, main ul li{
 }
 
 main ul{
-    margin-left: 5em;
+    padding: 0 5em;
 }
+    main ul li{
+        padding: 0.5em 0;
+    }
 
 .enlaceDeco{
     text-decoration: none;
 }
 
-.ubicacion{
-    text-align: center;
-    padding: 1em;
-}
-
-    .ubicacion iframe{
-        width: 90%;
-    }
-
-.multiVideo{
+/* .multiVideo{
     width: 35em;
     height: 50em;
-}
+} */
 
 .multiImg{
     width: 25%;
