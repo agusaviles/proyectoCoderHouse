@@ -16,12 +16,12 @@ body{
 }
 
 .menu a{
-    font-size: 3.3vh;
+    font-size: 1.3em;
 }
 
-    .menu a:hover{
-        color: rgb(233, 194, 78);
-    }
+.menu a:hover{
+    color: rgb(233, 194, 78);
+}
 
 .navbar-toggler-icon{
     background-image: url(../img/menu_open.svg);
@@ -33,9 +33,9 @@ aside{
     background-color: rgba(44,44,44, 0.1);
 }
 
-aside h2{
-    font-size: 3vh;
-    margin-top: 1em;
+aside h4{
+    margin: 1em 0;
+    text-align: center;
 }
 
 aside ul{
@@ -64,7 +64,7 @@ main{
     padding: 1em 0;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4, h5{
 	color: rgba(0,0,0);
     font-weight: bold;
 }
@@ -74,26 +74,19 @@ h1, h2{
 }
 
 h1{
-    font-size: 5vh;
     margin-top: 0.3em;
 }
 
 h2{
-    font-size: 4vh;
     padding: 0.5em;
 }
 
 h3{
-    font-size: 3vh;
     padding: 0.5em;
-    text-indent: 1em;
 }
 
 p, ul li{
     color: rgba(44,44,44);
-    font-size: 2.5vh;
-	line-height: 3.5vh;
-
 }
 
 main p, main h3{
@@ -137,10 +130,6 @@ main ul{
     text-align: center;
   }
   
-.h-label, .btn-dark{
-    font-size: 2.5vh;
-}
-
 .btn-dark{
     background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000 100%);
     margin: 5px;
@@ -166,37 +155,6 @@ main ul{
 
 
 /* ------------------------- fin dudas frecuentes ------------------------- */
-
-/* ------------------------- contenedorPacks ------------------------- */
-
-#contenedorPacks{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-    #contenedorPacks .pack{
-        padding: 0 2rem;
-    }
-
-    #contenedorPacks .pack .cantidadClase{
-        padding-top: 4rem;
-
-        text-align: center;
-        font-size: 8rem;
-        font-weight: bold;
-        color: rgba(226,216,92);
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-    }
-
-    #contenedorPacks .pack .precioClase{
-        padding: 4rem 0;
-
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
-/* ------------------------- fin contenedorPacks ------------------------- */
 
 /* ------------------------- index docs ------------------------- */
 .card{
@@ -225,6 +183,10 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+footer h3{
+    font-size: 1.3em;
 }
 
 .iconRedes{
