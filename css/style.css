@@ -1,301 +1,250 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
-
-*{
-    font-family: 'Asap', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+* {
+  font-family: "Asap", sans-serif;
 }
 
-body{
-    background-color: rgba(255,255,255);
-    overflow-x: hidden;
+body {
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
 }
 
-/* ------------------------- barra de navegacion ------------------------- */
+footer {
+  background: linear-gradient(90deg, rgba(240, 152, 25, 0.9) 0%, rgb(226, 216, 92) 51%, rgba(240, 152, 25, 0.9) 100%);
+}
+
+.iconRedes:hover {
+  cursor: pointer;
+}
+
 #navBar {
-    background-image: linear-gradient(to right, #000000 0%, #434343  100%);
+  grid-area: nav;
 }
 
-.menu a{
-    font-size: 1.3em;
+#header {
+  grid-area: header;
 }
 
-.menu a:hover{
-    color: rgb(233, 194, 78);
+#aside {
+  grid-area: aside;
 }
 
-.navbar-toggler-icon{
-    background-image: url(../img/menu_open.svg);
-}
-/* ------------------------- fin barra de navegacion ------------------------- */ 
-
-/* ------------------------- aside ------------------------- */
-aside{
-    background-color: rgba(44,44,44, 0.1);
+#main {
+  grid-area: main;
 }
 
-aside h4{
-    margin: 0.7em 0;
-    text-align: center;
+#footer {
+  grid-area: pie;
 }
 
-aside ul{
-    list-style: none;
-    padding: 0;
-    text-align: center;
+@media screen and (min-width: 320px) {
+  #contenedorIndex {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "nav" "header" "aside" "main" "pie";
+  }
+  #contenedorOtros {
+    display: grid;
+    grid-template-columns: 1, 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "nav" "main" "pie";
+  }
+  #docs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  #docs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  #contenedorIndex {
+    display: grid;
+    grid-template-columns: 17% 83%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "nav nav" "header header" "aside main" "pie pie";
+  }
+  #contenedorOtros {
+    display: grid;
+    grid-template-columns: 1, 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "nav" "main" "pie";
+  }
+  #docs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  #docs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#navBar {
+  background-image: linear-gradient(to right, #000000 0%, #434343 100%);
 }
 
-aside ul li{    
-    padding-bottom: 1em;
+.menu a {
+  font-size: 1.3em;
+}
+.menu a:hover {
+  color: rgb(233, 194, 78);
 }
 
-aside ul li a{
-    text-decoration: none;
-    color: rgba(44,44,44);
+.navbar-toggler-icon {
+  background-image: url(../img/menu_open.svg);
 }
 
-aside ul li a:hover{
-    font-weight: bold;
+aside {
+  background-color: rgba(44, 44, 44, 0.1);
+}
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+aside ul li a {
+  color: rgb(44, 44, 44);
+}
+aside ul li a:hover {
+  font-weight: bold;
 }
 
 .linea {
-    border-top: 1px solid #434343;
-    height: 2px;
-    width: 75%;
-    margin: 0 auto 1em auto;
-  }
-
-/* ------------------------- fin aside ------------------------- */
-
-/* ------------------------- main ------------------------- */
-main{
-    padding: 1em 0;
+  border-top: 1px solid rgb(44, 44, 44);
+  height: 2px;
+  margin: 0 auto 1em auto;
 }
 
-h1, h2, h3, h4, h5{
-	color: rgba(0,0,0);
-    font-weight: bold;
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
-h1, h2{
-    text-align: center;
+h2 {
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
-h1{
-    margin-top: 0.3em;
+h3 {
+  color: rgb(0, 0, 0);
 }
 
-h2{
-    padding: 0.5em;
+h4 {
+  color: rgb(0, 0, 0);
 }
 
-h3{
-    padding: 0.5em;
+h5 {
+  color: rgb(0, 0, 0);
 }
 
-p, ul li{
-    color: rgba(44,44,44);
+main p, main h3 {
+  color: rgb(44, 44, 44);
+  text-align: justify;
+  text-indent: 1em;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.5em 0;
+}
+main ul {
+  padding: 0 5em;
+}
+main ul li {
+  color: rgb(44, 44, 44);
+  padding: 0.5em 0;
 }
 
-main p, main h3{
-    text-align: justify;
-    text-indent: 1em;
-    width: 90%;
-    margin: 0 auto;
-    padding: 0.5em 0;
+.enlaceDeco {
+  text-decoration: none;
 }
 
-main ul{
-    padding: 0 5em;
+.btn-dark {
+  background-image: linear-gradient(to right, #000000 0%, #434343 51%, #000000 100%);
+  margin: 5px;
+  padding: 10px 35px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(238, 238, 238);
+  border-radius: 10px;
 }
-    main ul li{
-        padding: 0.5em 0;
-    }
-
-.enlaceDeco{
-    text-decoration: none;
+.btn-dark:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
-
-.multiImg{
-    width: 25%;
-}
-
-.tipoWod{
-    margin: 0.5em 2em;
-}
-
-/* ------------------------- dudas frecuentes ------------------------- */
-
-/* Formulario para enviar consulta */
-.formDudas {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  
-.btn-dark{
-    background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000 100%);
-    margin: 5px;
-    padding: 10px 35px;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: rgba(255,255,255);            
-    box-shadow: 0 0 20px rgb(238, 238, 238);
-    border-radius: 10px;
-}
-
-    .btn-dark:hover {
-        background-position: right center; /* change the direction of the change here */
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-    }
 
 .accordion-button:not(.collapsed) {
-    color: rgba(0, 0, 0, 1);
-    background-color: rgba(255,255,255);
-    font-weight: 700;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: 700;
 }
 
-
-/* ------------------------- fin dudas frecuentes ------------------------- */
-
-/* ------------------------- index docs ------------------------- */
-.card{
-    width: 18rem;
+.card {
+  width: 18rem;
 }
 
-#docs{
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    grid-row: auto;
-    justify-items: center;
+#docs {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-row: auto;
+  justify-items: center;
 }
 
-/* ------------------------- fin index docs ------------------------- */
-
-/* ------------------------- fin main ------------------------- */
-
-
-
-/* ------------------------- footer ------------------------- */
-
-footer{
-    padding-bottom: 1em;
-    padding-top: 0.5em;
-    background: linear-gradient(90deg, rgba(240,152,25,0.9) 0%, rgba(226,216,92,1) 51%, rgba(240,152,25,0.9) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.fotoA {
+  grid-area: fotoA;
 }
 
-footer h3{
-    font-size: 1.3em;
+.fotoB {
+  grid-area: fotoB;
 }
 
-.iconRedes{
-    margin: 0 1em;
+.fotoC {
+  grid-area: fotoC;
 }
 
-    .iconRedes:hover{
-        cursor: pointer;
-    }
-
-/* ------------------------- fin footer ------------------------- */
-
-
-
-/* ------------------------- maquetado grid ------------------------- */
-#navBar{
-    grid-area: nav;
+.fotoD {
+  grid-area: fotoD;
 }
 
-#header{
-    grid-area: header;
+.fotoE {
+  grid-area: fotoE;
 }
 
-#aside{
-    grid-area: aside;
+.fotoF {
+  grid-area: fotoF;
 }
 
-#main{
-    grid-area: main;
+#galeria {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 300px);
+  grid-template-areas: "fotoA" "fotoB" "fotoC" "fotoD" "fotoE" "fotoF";
+}
+#galeria img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-#footer{
-    grid-area: pie;
+@media (min-width: 768px) {
+  #galeria {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, 400px);
+    grid-template-areas: "fotoA fotoB" "fotoA fotoC" "fotoA fotoD" "fotoE fotoF";
+  }
 }
-
-@media screen and (min-width:320px){
-    #contenedorIndex{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(5, auto);
-        grid-template-areas: 
-        "nav" 
-        "header" 
-        "aside"
-        "main" 
-        "pie";
-    }
-
-    #contenedorOtros{
-        display: grid;
-        grid-template-columns: (1, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 
-        "nav" 
-        "main" 
-        "pie";
-    }
-
-    #docs{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-}
-
-@media (min-width:768px){
-       #docs{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width:1024px){
-    #contenedorIndex{
-        display: grid;
-        grid-template-columns: 17% 83%;
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: 
-        "nav nav" 
-        "header header" 
-        "aside main" 
-        "pie pie";
-    }
-
-    #contenedorOtros{
-        display: grid;
-        grid-template-columns: (1, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 
-        "nav" 
-        "main" 
-        "pie";
-    }
-
-    #docs{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width:1200px){
-    #docs{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-/* ------------------------- fin maquetado grid------------------------- */
-
-
-
-
-
+@media (min-width: 1200px) {
+  #galeria {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 30vh);
+    grid-template-areas: "fotoA fotoB fotoC" "fotoA fotoD fotoC" "fotoA fotoE fotoF";
+  }
+  #galeria img {
+    filter: grayscale(0.5);
+  }
+  #galeria img:hover {
+    filter: none;
+    transition: filter 1s;
+  }
+}/*# sourceMappingURL=style.css.map */

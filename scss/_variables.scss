@@ -1,0 +1,27 @@
+
+$font: 'Asap', sans-serif;
+
+
+//colores
+$paleta:(
+    'blanco': rgba(255, 255, 255),
+    'negro': rgba(0, 0, 0),
+    'uno': rgba(233, 194, 78),
+    'dos': rgba(44,44,44),
+    'dos-01': rgba(44,44,44, 0.1),
+);
+
+$btnShadow: rgb(238, 238, 238);
+
+$gradient: (
+    'dark': linear-gradient(to right, #000000 0%, #434343  51%, #000000 100%),
+    'footer': linear-gradient(90deg, rgba(240,152,25,0.9) 0%, rgba(226,216,92,1) 51%, rgba(240,152,25,0.9) 100%),
+    'navBar': linear-gradient(to right, #000000 0%, #434343  100%),
+);
+
+//iconos
+$toggler-icon: url(../img/menu_open.svg);
+
+
+
+

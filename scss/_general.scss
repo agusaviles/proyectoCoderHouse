@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+*{
+    font-family: 'Asap', sans-serif;
+}
+
+body{
+    background-color: map-get($map: $paleta, $key: 'blanco');
+    overflow-x: hidden;
+}
+
+// footer
+footer{
+    background: map-get($map: $gradient, $key: 'footer');
+}
+
+.iconRedes{
+    &:hover{
+        cursor: pointer;
+    }
+}
+//fin footer
+
+//grid
+
+#navBar{
+    grid-area: nav;
+}
+
+#header{
+    grid-area: header;
+}
+
+#aside{
+    grid-area: aside;
+}
+
+#main{
+    grid-area: main;
+}
+
+#footer{
+    grid-area: pie;
+}
+
+@media screen and (min-width:320px){
+    #contenedorIndex{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "nav" 
+        "header" 
+        "aside"
+        "main" 
+        "pie";
+    }
+
+    #contenedorOtros{
+        display: grid;
+        grid-template-columns: (1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "nav" 
+        "main" 
+        "pie";
+    }
+
+    #docs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media (min-width:768px){
+       #docs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1024px){
+    #contenedorIndex{
+        display: grid;
+        grid-template-columns: 17% 83%;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "nav nav" 
+        "header header" 
+        "aside main" 
+        "pie pie";
+    }
+
+    #contenedorOtros{
+        display: grid;
+        grid-template-columns: (1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "nav" 
+        "main" 
+        "pie";
+    }
+
+    #docs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1200px){
+    #docs{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+

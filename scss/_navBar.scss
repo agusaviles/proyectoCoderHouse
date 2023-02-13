@@ -1,0 +1,17 @@
+#navBar {
+    background-image: map-get($map: $gradient, $key: 'navBar');
+}
+
+.menu{
+    a{
+        font-size: 1.3em;
+
+        &:hover{
+            color: map-get($map: $paleta, $key: 'uno');
+        }
+    }
+}
+
+.navbar-toggler-icon{
+    background-image: $toggler-icon;
+}
