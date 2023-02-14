@@ -1,28 +1,20 @@
+@each $i in header,aside,main{
+    ##{$i}{
+        grid-area: #{$i};
+    }
+}
+
 #navBar{
     grid-area: nav;
-}
-
-#header{
-    grid-area: header;
-}
-
-#aside{
-    grid-area: aside;
-}
-
-#main{
-    grid-area: main;
 }
 
 #footer{
     grid-area: pie;
 }
 
-@media screen and (min-width:320px){
-    #contenedorIndex{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(5, auto);
+#contenedorIndex{
+    @media (min-width:320px){
+        @include d-grid(1fr, repeat(5, auto));
         grid-template-areas: 
         "nav" 
         "header" 
@@ -31,58 +23,76 @@
         "pie";
     }
 
-    #contenedorOtros{
-        display: grid;
-        grid-template-columns: (1, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 
-        "nav" 
-        "main" 
-        "pie";
-    }
-
-    #docs{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-}
-
-@media (min-width:768px){
-       #docs{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width:1024px){
-    #contenedorIndex{
-        display: grid;
-        grid-template-columns: 17% 83%;
-        grid-template-rows: repeat(4, auto);
+    @media (min-width:1024px){
+        @include d-grid(17% 83%, repeat(4, auto));
         grid-template-areas: 
         "nav nav" 
         "header header" 
         "aside main" 
         "pie pie";
     }
+}
 
-    #contenedorOtros{
-        display: grid;
-        grid-template-columns: (1, 1fr);
-        grid-template-rows: repeat(3, auto);
+#contenedorOtros{
+    @media (min-width:320px){
+        @include d-grid(1fr, repeat(3, auto));
         grid-template-areas: 
         "nav" 
         "main" 
         "pie";
     }
+}
 
-    #docs{
-        grid-template-columns: repeat(2, 1fr);
+#docs{
+    @media (min-width:320px){
+        grid-template-columns: repeat(1, 1fr);
+    }
+    @media (min-width:768px){
+         grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width:1200px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+}
+
+//error404
+#contenedorError{
+    @media (min-width: 768px){
+        @include d-grid(repeat(2, 1fr), auto);
+        grid-template-areas:
+        'img-error mensaje-error';
     }
 }
 
-@media (min-width:1200px){
-    #docs{
-        grid-template-columns: repeat(3, 1fr);
+//galeria de imagenes
+
+#galeria{
+    @media (min-width: 768px){
+        @include d-grid(1fr 2fr,  repeat(4, 400px));
+        grid-template-areas:
+        'fotoA fotoB'
+        'fotoA fotoC'
+        'fotoD fotoE'
+        'fotoF fotoE';
+    }
+
+    @media (min-width: 1200px){
+        @include d-grid(1fr 2fr 1fr, repeat(3, 300px));
+        grid-template-areas:
+        'fotoA fotoB fotoC'
+        'fotoA fotoD fotoC'
+        'fotoA fotoE fotoF';
+        img{
+            filter: grayscale(.5);
+            &:hover{
+                filter: none;
+                transition: filter 1s;
+            }
+        }
     }
 }
+
+
+
+
 

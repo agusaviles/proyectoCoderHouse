@@ -5,13 +5,17 @@
 }
 
 body{
-    background-color: map-get($map: $paleta, $key: 'blanco');
+    background: map-get($map: $paleta, $key: 'blanco');
     overflow-x: hidden;
+
+    #contenedorOtros{
+        min-height: 100vh;
+    }
 }
 
 //navBar
 #navBar {
-    background-image: map-get($map: $gradient, $key: 'navBar');
+    background: map-get($map: $gradient, $key: 'navBar');
     margin-bottom: auto;
 }
 
@@ -33,7 +37,7 @@ body{
 //aside
 aside{
 
-    background-color: map-get($map: $paleta, $key: 'dos-01');
+    background: map-get($map: $paleta, $key: 'dos-01');
 
     ul{
         list-style: none;
@@ -100,24 +104,17 @@ main{
 //Formulario para enviar consulta 
 .btn-dark{
     background-image: map-get($map: $gradient, $key: 'dark');
-    margin: 5px;
-    padding: 10px 35px;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: map-get($map: $paleta, $key: 'blanco');            
-    box-shadow: 0 0 20px $btnShadow;
-    border-radius: 10px;
+    @extend .btn-grad;
+}
 
-    &:hover{
-        background-position: right center; /* change the direction of the change here */
-        color: map-get($map: $paleta, $key: 'blanco');
-        text-decoration: none;
-    }
+.btn-error{
+    background-image: map-get($map: $gradient, $key: 'btnInicio');
+    @extend .btn-grad;
 }
 
 .accordion-button:not(.collapsed) {
     color: map-get($map: $paleta, $key: 'negro');
-    background-color: map-get($map: $paleta, $key: 'blanco');
+    background: map-get($map: $paleta, $key: 'blanco');
     font-weight: 700;
 }
 //fin dudas frecuentes
@@ -128,9 +125,7 @@ main{
 }
 
 #docs{
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    grid-row: auto;
+    @include d-grid(repeat(3, 3fr), auto);
     justify-items: center;
 }
 
@@ -151,9 +146,7 @@ main{
         object-fit: cover;
     }
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 300px);
+    @include d-grid(1fr, repeat(6, 300px));
     grid-template-areas:
     'fotoA'
     'fotoB'
@@ -161,40 +154,6 @@ main{
     'fotoD'
     'fotoE'
     'fotoF';
-}
-
-@media (min-width: 768px){
-    #galeria{
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: repeat(4, 400px);
-        grid-template-areas:
-        'fotoA fotoB'
-        'fotoA fotoC'
-        'fotoD fotoE'
-        'fotoF fotoE';
-    }
-}
-
-@media (min-width: 1200px){
-    #galeria{
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: repeat(3, 300px);
-        grid-template-areas:
-        'fotoA fotoB fotoC'
-        'fotoA fotoD fotoC'
-        'fotoA fotoE fotoF';
-    }
-
-    #galeria{
-        img{
-            filter: grayscale(.5);
-            &:hover{
-                filter: none;
-                transition: filter 1s;
-            }
-        }
-
-    }
 }
 
 //fin galeria de imagenes
@@ -217,23 +176,14 @@ main{
 }
 
 #contenedorError{
-    display: grid;
-    grid-template-columns: 1fr;
+    @include d-grid(1fr, auto);
     grid-template-areas:
     'img-error'
     'mensaje-error';
 }
 
-@media (min-width: 768px){
-    #contenedorError{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-        'img-error mensaje-error';
-    }
-}
-
-
 //fin error 404
+
 //fin main
 
 // footer

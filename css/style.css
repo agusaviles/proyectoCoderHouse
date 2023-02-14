@@ -1,15 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+.btn-grad, .btn-error, .btn-dark {
+  margin: 5px;
+  padding: 10px 35px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(238, 238, 238);
+  border-radius: 10px;
+}
+.btn-grad:hover, .btn-error:hover, .btn-dark:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
 * {
   font-family: "Asap", sans-serif;
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
   overflow-x: hidden;
+}
+body #contenedorOtros {
+  min-height: 100vh;
 }
 
 #navBar {
-  background-image: linear-gradient(to right, #000000 0%, #434343 100%);
+  background: linear-gradient(to right, #000000 0%, #434343 100%);
   margin-bottom: auto;
 }
 
@@ -25,7 +43,7 @@ body {
 }
 
 aside {
-  background-color: rgba(44, 44, 44, 0.1);
+  background: rgba(44, 44, 44, 0.1);
 }
 aside ul {
   list-style: none;
@@ -88,23 +106,15 @@ main ul li {
 
 .btn-dark {
   background-image: linear-gradient(to right, #000000 0%, #434343 51%, #000000 100%);
-  margin: 5px;
-  padding: 10px 35px;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: rgb(255, 255, 255);
-  box-shadow: 0 0 20px rgb(238, 238, 238);
-  border-radius: 10px;
 }
-.btn-dark:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: rgb(255, 255, 255);
-  text-decoration: none;
+
+.btn-error {
+  background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
 }
 
 .accordion-button:not(.collapsed) {
   color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
   font-weight: 700;
 }
 
@@ -115,7 +125,7 @@ main ul li {
 #docs {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
-  grid-row: auto;
+  grid-template-rows: auto;
   justify-items: center;
 }
 
@@ -156,27 +166,6 @@ main ul li {
      object-fit: cover;
 }
 
-@media (min-width: 768px) {
-  #galeria {
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(4, 400px);
-    grid-template-areas: "fotoA fotoB" "fotoA fotoC" "fotoD fotoE" "fotoF fotoE";
-  }
-}
-@media (min-width: 1200px) {
-  #galeria {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: repeat(3, 300px);
-    grid-template-areas: "fotoA fotoB fotoC" "fotoA fotoD fotoC" "fotoA fotoE fotoF";
-  }
-  #galeria img {
-    filter: grayscale(0.5);
-  }
-  #galeria img:hover {
-    filter: none;
-    transition: filter 1s;
-  }
-}
 #img-error {
   grid-area: img-error;
   display: flex;
@@ -196,25 +185,16 @@ main ul li {
 #contenedorError {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   grid-template-areas: "img-error" "mensaje-error";
 }
 
-@media (min-width: 768px) {
-  #contenedorError {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "img-error mensaje-error";
-  }
-}
 footer {
   background: linear-gradient(90deg, rgba(240, 152, 25, 0.9) 0%, rgb(226, 216, 92) 51%, rgba(240, 152, 25, 0.9) 100%);
 }
 
 .iconRedes:hover {
   cursor: pointer;
-}
-
-#navBar {
-  grid-area: nav;
 }
 
 #header {
@@ -229,30 +209,20 @@ footer {
   grid-area: main;
 }
 
+#navBar {
+  grid-area: nav;
+}
+
 #footer {
   grid-area: pie;
 }
 
-@media screen and (min-width: 320px) {
+@media (min-width: 320px) {
   #contenedorIndex {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "nav" "header" "aside" "main" "pie";
-  }
-  #contenedorOtros {
-    display: grid;
-    grid-template-columns: 1, 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "nav" "main" "pie";
-  }
-  #docs {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media (min-width: 768px) {
-  #docs {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1024px) {
@@ -262,12 +232,23 @@ footer {
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "nav nav" "header header" "aside main" "pie pie";
   }
+}
+
+@media (min-width: 320px) {
   #contenedorOtros {
     display: grid;
-    grid-template-columns: 1, 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "nav" "main" "pie";
   }
+}
+
+@media (min-width: 320px) {
+  #docs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 768px) {
   #docs {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -275,5 +256,38 @@ footer {
 @media (min-width: 1200px) {
   #docs {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  #contenedorError {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "img-error mensaje-error";
+  }
+}
+
+@media (min-width: 768px) {
+  #galeria {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, 400px);
+    grid-template-areas: "fotoA fotoB" "fotoA fotoC" "fotoD fotoE" "fotoF fotoE";
+  }
+}
+@media (min-width: 1200px) {
+  #galeria {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas: "fotoA fotoB fotoC" "fotoA fotoD fotoC" "fotoA fotoE fotoF";
+  }
+  #galeria img {
+    filter: grayscale(0.5);
+  }
+  #galeria img:hover {
+    filter: none;
+    transition: filter 1s;
   }
 }/*# sourceMappingURL=style.css.map */
