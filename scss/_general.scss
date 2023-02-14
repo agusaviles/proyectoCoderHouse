@@ -9,9 +9,14 @@ body{
     overflow-x: hidden;
 }
 
+#contenedorOtros{
+    min-height: 100vh;
+}
+
 // footer
 footer{
     background: map-get($map: $gradient, $key: 'footer');
+    margin-top: auto;
 }
 
 .iconRedes{

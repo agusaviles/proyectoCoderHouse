@@ -1,5 +1,6 @@
 #navBar {
     background-image: map-get($map: $gradient, $key: 'navBar');
+    margin-bottom: auto;
 }
 
 .menu{

@@ -1,4 +1,3 @@
-
 @for $i from 1 through 5{
     h#{$i}{
         color: map-get($map: $paleta, $key: 'negro');
@@ -70,8 +69,8 @@ main{
     grid-row: auto;
     justify-items: center;
 }
-//fin index docs
 
+//fin index docs
 
 //galeria de imagenes
 
@@ -107,15 +106,15 @@ main{
         grid-template-areas:
         'fotoA fotoB'
         'fotoA fotoC'
-        'fotoA fotoD'
-        'fotoE fotoF';
+        'fotoD fotoE'
+        'fotoF fotoE';
     }
 }
 
 @media (min-width: 1200px){
     #galeria{
         grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: repeat(3, 30vh);
+        grid-template-rows: repeat(3, 300px);
         grid-template-areas:
         'fotoA fotoB fotoC'
         'fotoA fotoD fotoC'
@@ -135,3 +134,39 @@ main{
 }
 
 //fin galeria de imagenes
+
+
+//error 404
+
+@each $i in img,mensaje{
+    ##{$i}-error{
+        grid-area: #{$i}-error;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        @if $i == mensaje{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+#contenedorError{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'img-error'
+    'mensaje-error';
+}
+
+@media (min-width: 768px){
+    #contenedorError{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        'img-error mensaje-error';
+    }
+}
+
+
+//fin error 404
